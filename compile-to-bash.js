@@ -1,7 +1,5 @@
-#!/usr/bin/env node
-
-const fs = require('fs');
-const crypto = require('crypto');
+import fs from 'fs';
+import crypto from 'crypto';
 
 const template = JSON.parse(fs.readFileSync('nginx-template.json', 'utf8'));
 
@@ -141,7 +139,7 @@ const now = new Date().toISOString();
 const inputs = {
   contract_id: contractId,
   created_at: now,
-  domain: "example.com"
+  domain: "hamayni.io"
 };
 
 const resolved = deepReplace(template, inputs);
